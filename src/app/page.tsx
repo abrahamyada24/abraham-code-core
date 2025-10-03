@@ -1,11 +1,11 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Monitor, Wrench, HardDrive, Clock, MapPin, Phone, Mail, Facebook, Instagram, ChevronRight, Menu, X, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
+import { Monitor, Wrench, HardDrive, Clock, MapPin, Phone, Mail, Instagram, ChevronRight, Menu, X, MessageCircle } from 'lucide-react';
 
 export default function AbrahamCodeCore() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // SEO: Add structured data for local business
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -50,7 +50,7 @@ export default function AbrahamCodeCore() {
       ]
     });
     document.head.appendChild(script);
-    
+
     // Add meta tags
     const metaDescription = document.createElement('meta');
     metaDescription.name = 'description';
@@ -126,25 +126,28 @@ export default function AbrahamCodeCore() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/logo.png" 
-                alt="Abraham Code & Core Logo" 
-                className="w-10 h-10 rounded-lg object-cover"
-                onError={(e) => {
-                  // Fallback jika logo tidak ditemukan
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
-              />
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg items-center justify-center font-bold text-lg hidden" aria-hidden="true">
-                A
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/logo.png"
+                  alt="Abraham Code & Core Logo"
+                  width={40}
+                  height={40}
+                  className="rounded-lg object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg items-center justify-center font-bold text-lg hidden" aria-hidden="true">
+                  A
+                </div>
               </div>
               <div>
                 <h1 className="font-bold text-xl">Abraham Code & Core</h1>
                 <p className="text-xs text-gray-300">Solusi IT Anda</p>
               </div>
             </div>
-            
+
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="hover:text-cyan-400 transition">Home</a>
@@ -152,9 +155,8 @@ export default function AbrahamCodeCore() {
               <a href="#schedule" className="hover:text-cyan-400 transition">Jam Buka</a>
               <a href="#contact" className="hover:text-cyan-400 transition">Kontak</a>
             </div>
-
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle mobile menu"
@@ -163,7 +165,6 @@ export default function AbrahamCodeCore() {
               {mobileMenuOpen ? <X /> : <Menu />}
             </button>
           </div>
-
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div className="md:hidden pb-4 space-y-2">
@@ -177,50 +178,39 @@ export default function AbrahamCodeCore() {
       </nav>
 
       {/* Hero Section */}
-      <header
-  id="home"
-  className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20 overflow-hidden"
->
-  {/* Background Image */}
-  <div
-    className="absolute inset-0 bg-cover bg-center opacity-30"
-    style={{ backgroundImage: "url('/caro.png')" }}
-  ></div>
-
-  {/* Overlay agar teks tetap terbaca */}
-  <div className="absolute inset-0 bg-black opacity-40"></div>
-
-  {/* Konten teks */}
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center">
-    <div className="text-center w-full">
-      <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-        Abraham "Code & Core"
-      </h2>
-      <p className="text-xl md:text-2xl mb-8 text-gray-300">
-        Solusi IT Anda di Madiun
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="https://wa.me/6285156492409"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gradient-to-r from-green-600 to-green-500 px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-green-600 transition transform hover:scale-105 inline-flex items-center justify-center"
-        >
-          <MessageCircle className="mr-2" /> Chat WhatsApp
-        </a>
-        <a
-          href="#services"
-          className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105 inline-flex items-center justify-center"
-        >
-          Lihat Layanan
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
-
-
-
+      <header id="home" className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: "url('/caro.png')" }}></div>
+        {/* Overlay agar teks tetap terbaca */}
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        {/* Konten teks */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center">
+          <div className="text-center w-full">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Abraham &quot;Code & Core&quot;
+            </h2>
+            <p className="text-xl md:text-2xl mb-8 text-gray-300">
+              Solusi IT Anda di Madiun
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://wa.me/6285156492409"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-green-600 to-green-500 px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-green-600 transition transform hover:scale-105 inline-flex items-center justify-center"
+              >
+                <MessageCircle className="mr-2" /> Chat WhatsApp
+              </a>
+              <a
+                href="#services"
+                className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105 inline-flex items-center justify-center"
+              >
+                Lihat Layanan
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* Stats Section */}
       <section className="bg-white py-12 shadow-md">
@@ -249,7 +239,6 @@ export default function AbrahamCodeCore() {
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Layanan Kami</h2>
             <p className="text-gray-600 text-lg">Solusi profesional untuk semua kebutuhan teknologi Anda</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <article key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2">
@@ -270,11 +259,10 @@ export default function AbrahamCodeCore() {
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Jam Operasional</h2>
             <p className="text-gray-600">Kami siap melayani Anda setiap hari</p>
           </div>
-
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-xl overflow-hidden">
             {schedule.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`flex justify-between items-center p-4 ${index !== schedule.length - 1 ? 'border-b border-blue-100' : ''} ${item.hours === 'Tutup' ? 'bg-gray-100' : 'hover:bg-white'} transition`}
               >
                 <span className="font-semibold text-slate-900">{item.day}</span>
@@ -284,7 +272,7 @@ export default function AbrahamCodeCore() {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-6 text-center">
             <p className="text-green-600 font-semibold inline-flex items-center">
               <span className="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></span>
@@ -301,7 +289,6 @@ export default function AbrahamCodeCore() {
             <h2 className="text-4xl font-bold mb-4">Hubungi Kami</h2>
             <p className="text-gray-300 text-lg">Kami siap membantu kebutuhan teknologi Anda</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Info */}
             <div className="space-y-6">
@@ -317,7 +304,6 @@ export default function AbrahamCodeCore() {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4 bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
                 <Phone className="w-6 h-6 mt-1 flex-shrink-0 text-cyan-400" />
                 <div>
@@ -325,9 +311,9 @@ export default function AbrahamCodeCore() {
                   <a href="tel:085156492409" className="text-gray-300 hover:text-cyan-400 transition block mb-2">
                     0851-5649-2409
                   </a>
-                  <a 
-                    href="https://wa.me/6285156492409" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/6285156492409"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm font-semibold transition"
                   >
@@ -336,7 +322,6 @@ export default function AbrahamCodeCore() {
                   </a>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4 bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
                 <Mail className="w-6 h-6 mt-1 flex-shrink-0 text-cyan-400" />
                 <div>
@@ -347,7 +332,6 @@ export default function AbrahamCodeCore() {
                 </div>
               </div>
             </div>
-
             {/* Map */}
             <div className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
               <h3 className="font-semibold text-lg mb-4">Lokasi Kami</h3>
@@ -363,9 +347,9 @@ export default function AbrahamCodeCore() {
                   className="rounded-lg"
                 ></iframe>
               </div>
-              <a 
-                href="https://maps.app.goo.gl/XRLBqnyMECwvV1B88" 
-                target="_blank" 
+              <a
+                href="https://maps.app.goo.gl/XRLBqnyMECwvV1B88"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center text-cyan-400 hover:text-cyan-300 transition"
               >
@@ -380,7 +364,7 @@ export default function AbrahamCodeCore() {
       <footer className="bg-slate-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-2">Abraham "Code & Core"</h3>
+            <h3 className="text-2xl font-bold mb-2">Abraham &quot;Code & Core&quot;</h3>
             <p className="text-gray-400 mb-4">Solusi IT Anda</p>
             <div className="flex justify-center space-x-6 mb-4">
               <a href="https://www.instagram.com/abrahamyada?igsh=MXZ6dnBlMGp5Mzkzcw==" className="text-gray-400 hover:text-cyan-400 transition">
