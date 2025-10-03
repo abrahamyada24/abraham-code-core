@@ -51,7 +51,6 @@ export default function AbrahamCodeCore() {
     });
     document.head.appendChild(script);
 
-    // Add meta tags
     const metaDescription = document.createElement('meta');
     metaDescription.name = 'description';
     metaDescription.content = 'Abraham Code & Core - Servis komputer profesional di Madiun. Layanan: Fullstack Web Developer, Install OS Windows & Linux, Repair Software, Service Hardware. Buka Senin-Jumat 07:00-21:00. Hubungi: 0851-5649-2409';
@@ -62,7 +61,6 @@ export default function AbrahamCodeCore() {
     metaKeywords.content = 'servis komputer madiun, service laptop madiun, install windows madiun, web developer madiun, repair komputer madiun, upgrade laptop madiun, Abraham Code Core';
     document.head.appendChild(metaKeywords);
 
-    // Open Graph tags
     const ogTitle = document.createElement('meta');
     ogTitle.setAttribute('property', 'og:title');
     ogTitle.content = 'Abraham Code & Core - Servis Komputer Profesional Madiun';
@@ -78,7 +76,6 @@ export default function AbrahamCodeCore() {
     ogType.content = 'business.business';
     document.head.appendChild(ogType);
 
-    // Set page title
     document.title = 'Abraham Code & Core - Servis Komputer & Web Developer Madiun';
 
     return () => {
@@ -135,10 +132,11 @@ export default function AbrahamCodeCore() {
                   className="rounded-lg object-cover"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextSibling.style.display = 'flex';
+                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
                   }}
                 />
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg items-center justify-center font-bold text-lg hidden" aria-hidden="true">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center font-bold text-lg hidden" aria-hidden="true">
                   A
                 </div>
               </div>
@@ -187,7 +185,7 @@ export default function AbrahamCodeCore() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center">
           <div className="text-center w-full">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Abraham &quot;Code & Core&quot;
+              Abraham {`"`}Code & Core{`"`}
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-gray-300">
               Solusi IT Anda di Madiun
@@ -364,7 +362,7 @@ export default function AbrahamCodeCore() {
       <footer className="bg-slate-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-2">Abraham &quot;Code & Core&quot;</h3>
+            <h3 className="text-2xl font-bold mb-2">Abraham {`"`}Code & Core{`"`}</h3>
             <p className="text-gray-400 mb-4">Solusi IT Anda</p>
             <div className="flex justify-center space-x-6 mb-4">
               <a href="https://www.instagram.com/abrahamyada?igsh=MXZ6dnBlMGp5Mzkzcw==" className="text-gray-400 hover:text-cyan-400 transition">
