@@ -131,8 +131,9 @@ export default function AbrahamCodeCore() {
                   height={40}
                   className="rounded-lg object-cover"
                   onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
                     if (fallback) fallback.style.display = 'flex';
                   }}
                 />
