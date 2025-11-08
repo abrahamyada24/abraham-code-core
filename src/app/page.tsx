@@ -107,13 +107,13 @@ export default function AbrahamCodeCore() {
   ];
 
   const schedule = [
+    { day: "Senin", hours: "07.00 - 21.00" },
     { day: "Selasa", hours: "07.00 - 21.00" },
     { day: "Rabu", hours: "07.00 - 21.00" },
     { day: "Kamis", hours: "07.00 - 21.00" },
     { day: "Jumat", hours: "07.00 - 21.00" },
     { day: "Sabtu", hours: "07.00 - 11.00" },
-    { day: "Minggu", hours: "Tutup" },
-    { day: "Senin", hours: "07.00 - 21.00" }
+    { day: "Minggu", hours: "Tutup" }
   ];
 
   return (
@@ -188,7 +188,7 @@ export default function AbrahamCodeCore() {
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Abraham {`"`}Code & Core{`"`}
             </h2>
-            <p className="text-xl md:text-2xl mb-8 text-gray-300">
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">
               Solusi IT Anda di Madiun
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -196,13 +196,14 @@ export default function AbrahamCodeCore() {
                 href="https://wa.me/6285156492409"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-green-600 to-green-500 px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-green-600 transition transform hover:scale-105 inline-flex items-center justify-center"
+                className="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-2xl transition transform hover:scale-105 inline-flex items-center justify-center"
               >
-                <MessageCircle className="mr-2" /> Chat WhatsApp
+                <MessageCircle className="mr-3 w-6 h-6" fill="currentColor" strokeWidth={0} /> 
+                Chat via WhatsApp
               </a>
               <a
                 href="#services"
-                className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105 inline-flex items-center justify-center"
+                className="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-gray-100 transition transform hover:scale-105 inline-flex items-center justify-center"
               >
                 Lihat Layanan
               </a>
@@ -285,17 +286,17 @@ export default function AbrahamCodeCore() {
       <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Hubungi Kami</h2>
-            <p className="text-gray-300 text-lg">Kami siap membantu kebutuhan teknologi Anda</p>
+            <h2 className="text-4xl font-bold mb-4 text-white">Hubungi Kami</h2>
+            <p className="text-gray-200 text-lg">Kami siap membantu kebutuhan teknologi Anda</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="flex items-start space-x-4 bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+              <div className="flex items-start space-x-4 bg-slate-800 bg-opacity-60 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-10">
                 <MapPin className="w-6 h-6 mt-1 flex-shrink-0 text-cyan-400" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">Alamat</h3>
-                  <p className="text-gray-300">
+                  <h3 className="font-bold text-lg mb-2 text-white">Alamat</h3>
+                  <p className="text-gray-100 leading-relaxed">
                     Jl. Seroja No.49 A, RT.009/RW.003,<br />
                     Pojoksatu, Munggut,<br />
                     Kec. Wungu, Kabupaten Madiun,<br />
@@ -303,38 +304,38 @@ export default function AbrahamCodeCore() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4 bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+              <div className="flex items-start space-x-4 bg-slate-800 bg-opacity-60 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-10">
                 <Phone className="w-6 h-6 mt-1 flex-shrink-0 text-cyan-400" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Telepon / WhatsApp</h3>
-                  <a href="tel:085156492409" className="text-gray-300 hover:text-cyan-400 transition block mb-2">
+                <div className="flex-1">
+                  <h3 className="font-bold text-lg mb-2 text-white">Telepon / WhatsApp</h3>
+                  <a href="tel:085156492409" className="text-gray-100 hover:text-cyan-300 transition block mb-3 text-lg">
                     0851-5649-2409
                   </a>
                   <a
                     href="https://wa.me/6285156492409"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm font-semibold transition"
+                    className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-lg text-sm font-bold transition shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Chat WhatsApp
+                    <MessageCircle className="w-5 h-5 mr-2" fill="currentColor" strokeWidth={0} />
+                    Chat via WhatsApp
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4 bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
+              <div className="flex items-start space-x-4 bg-slate-800 bg-opacity-60 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-10">
                 <Mail className="w-6 h-6 mt-1 flex-shrink-0 text-cyan-400" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-2">Email</h3>
-                  <a href="mailto:abrahamyadaa24@gmail.com" className="text-gray-300 hover:text-cyan-400 transition">
+                  <h3 className="font-bold text-lg mb-2 text-white">Email</h3>
+                  <a href="mailto:abrahamyadaa24@gmail.com" className="text-gray-100 hover:text-cyan-300 transition">
                     abrahamyadaa24@gmail.com
                   </a>
                 </div>
               </div>
             </div>
             {/* Map */}
-            <div className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
-              <h3 className="font-semibold text-lg mb-4">Lokasi Kami</h3>
-              <div className="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
+            <div className="bg-slate-800 bg-opacity-60 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-10">
+              <h3 className="font-bold text-lg mb-4 text-white">Lokasi Kami</h3>
+              <div className="bg-gray-300 h-64 rounded-lg flex items-center justify-center overflow-hidden">
                 <iframe
                   title="Lokasi Abraham Code & Core di Google Maps"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.2951496057563!2d111.54614637654313!3d-7.651378492364836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79bf961c3de66d%3A0xb32b35355406f480!2sAbraham%20%22Code%20%26%20Core%22!5e0!3m2!1sen!2sid!4v1759410214071!5m2!1sen!2sid"
@@ -350,7 +351,7 @@ export default function AbrahamCodeCore() {
                 href="https://maps.app.goo.gl/XRLBqnyMECwvV1B88"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center text-cyan-400 hover:text-cyan-300 transition"
+                className="mt-4 inline-flex items-center text-cyan-300 hover:text-cyan-200 transition font-semibold"
               >
                 Buka di Google Maps <ChevronRight className="ml-1" />
               </a>
@@ -363,14 +364,14 @@ export default function AbrahamCodeCore() {
       <footer className="bg-slate-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-2">Abraham {`"`}Code & Core{`"`}</h3>
-            <p className="text-gray-400 mb-4">Solusi IT Anda</p>
+            <h3 className="text-2xl font-bold mb-2 text-white">Abraham {`"`}Code & Core{`"`}</h3>
+            <p className="text-gray-300 mb-4">Solusi IT Anda</p>
             <div className="flex justify-center space-x-6 mb-4">
-              <a href="https://www.instagram.com/abrahamyada?igsh=MXZ6dnBlMGp5Mzkzcw==" className="text-gray-400 hover:text-cyan-400 transition">
-                <Instagram />
+              <a href="https://www.instagram.com/abrahamyada?igsh=MXZ6dnBlMGp5Mzkzcw==" className="text-gray-300 hover:text-cyan-400 transition" target="_blank" rel="noopener noreferrer">
+                <Instagram className="w-6 h-6" />
               </a>
             </div>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-400 text-sm">
               © 2025 Abraham Code & Core. All rights reserved.
             </p>
           </div>
@@ -382,10 +383,13 @@ export default function AbrahamCodeCore() {
         href="https://wa.me/6285156492409"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 z-50 animate-bounce"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 z-50 group"
         aria-label="Chat WhatsApp"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-7 h-7" fill="currentColor" strokeWidth={0} />
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-slate-900 text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+          Chat WhatsApp
+        </span>
       </a>
     </div>
   );
