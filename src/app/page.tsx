@@ -164,6 +164,83 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="py-24 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">Galeri Kegiatan</h2>
+            <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+              Sekilas aktivitas dan fasilitas di Abraham Code & Core.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Gallery Item 1 */}
+            <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+              {/* 
+                  NOTE FOR USER: 
+                  To replace this image with your own Google Maps photo:
+                  1. Rename your photo to 'gallery-1.jpg' (or .png)
+                  2. Put it in the 'public' folder
+                  3. Change src="/gallery-1.png" to src="/gallery-1.jpg" below
+               */}
+              <Image
+                src="/gallery-1.png"
+                alt="Service Komputer Madiun"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-1">Hardware Service</span>
+                <h3 className="text-white text-xl font-bold">Perbaikan Profesional</h3>
+              </div>
+            </div>
+
+            {/* Gallery Item 2 */}
+            <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 lg:translate-y-8">
+              {/* 
+                  NOTE FOR USER: 
+                  To replace this image with your own Google Maps photo:
+                  1. Rename your photo to 'gallery-2.jpg' (or .png)
+                  2. Put it in the 'public' folder
+                  3. Change src="/gallery-2.png" to src="/gallery-2.jpg" below
+               */}
+              <Image
+                src="/gallery-2.png"
+                alt="Web Development Madiun"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-1">Web Development</span>
+                <h3 className="text-white text-xl font-bold">Coding & Programming</h3>
+              </div>
+            </div>
+
+            {/* Gallery Item 3 */}
+            <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+              {/* 
+                  NOTE FOR USER: 
+                  To replace this image with your own Google Maps photo:
+                  1. Rename your photo to 'gallery-3.jpg' (or .png)
+                  2. Put it in the 'public' folder
+                  3. Change src="/gallery-3.png" to src="/gallery-3.jpg" below
+               */}
+              <Image
+                src="/gallery-3.png"
+                alt="Toko Komputer Madiun"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-1">Workshop</span>
+                <h3 className="text-white text-xl font-bold">Layanan Ramah</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Schedule Section */}
       <section id="schedule" className="py-24 bg-white dark:bg-slate-900 relative border-t border-slate-100 dark:border-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,8 +264,8 @@ export default function Home() {
                   <div className="flex items-center gap-4 mt-2 sm:mt-0">
                     <span className="text-slate-600 dark:text-slate-400 font-medium">{item.time}</span>
                     <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${item.status === 'Buka' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
-                        item.status === 'Tutup' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' :
-                          'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400'
+                      item.status === 'Tutup' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' :
+                        'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400'
                       }`}>
                       {item.status}
                     </span>
