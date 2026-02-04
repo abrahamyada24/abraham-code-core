@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Monitor, Wrench, HardDrive, Clock, MapPin, Phone, Mail, Instagram, ChevronRight, Menu, X } from 'lucide-react';
+import { Monitor, Wrench, HardDrive, Clock, MapPin, Phone, Mail, Instagram, ChevronRight } from 'lucide-react';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
