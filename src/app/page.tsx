@@ -177,15 +177,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Gallery Item 1 */}
             <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-              {/* 
-                  NOTE FOR USER: 
-                  To replace this image with your own Google Maps photo:
-                  1. Rename your photo to 'gallery-1.jpg' (or .png)
-                  2. Put it in the 'public' folder
-                  3. Change src="/gallery-1.png" to src="/gallery-1.jpg" below
-               */}
               <Image
-                src="/gallery-1.png"
+                src="/gallery-hardware.jpg"
                 alt="Service Komputer Madiun"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -198,15 +191,8 @@ export default function Home() {
 
             {/* Gallery Item 2 */}
             <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 lg:translate-y-8">
-              {/* 
-                  NOTE FOR USER: 
-                  To replace this image with your own Google Maps photo:
-                  1. Rename your photo to 'gallery-2.jpg' (or .png)
-                  2. Put it in the 'public' folder
-                  3. Change src="/gallery-2.png" to src="/gallery-2.jpg" below
-               */}
               <Image
-                src="/gallery-2.png"
+                src="/gallery-coding.jpg"
                 alt="Web Development Madiun"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -219,22 +205,15 @@ export default function Home() {
 
             {/* Gallery Item 3 */}
             <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-              {/* 
-                  NOTE FOR USER: 
-                  To replace this image with your own Google Maps photo:
-                  1. Rename your photo to 'gallery-3.jpg' (or .png)
-                  2. Put it in the 'public' folder
-                  3. Change src="/gallery-3.png" to src="/gallery-3.jpg" below
-               */}
               <Image
-                src="/gallery-3.png"
-                alt="Toko Komputer Madiun"
+                src="/gallery-project.jpg"
+                alt="Software & Aplikasi"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-1">Workshop</span>
-                <h3 className="text-white text-xl font-bold">Layanan Ramah</h3>
+                <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider mb-1">Real Projects</span>
+                <h3 className="text-white text-xl font-bold">Aplikasi Terintegrasi</h3>
               </div>
             </div>
           </div>
